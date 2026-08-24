@@ -1,0 +1,200 @@
+{
+  "lab": "lab02",
+  "problems": [
+    {
+      "id": "1-sum",
+      "title": "int sum(int *arr, int n) -- a leaf function",
+      "built": true,
+      "linked": true,
+      "cases": [
+        {
+          "case": 0,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=6  arr=[4, 8, 15, 16, 23, 42]",
+          "detail": ""
+        },
+        {
+          "case": 1,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=1  arr=[7]",
+          "detail": ""
+        },
+        {
+          "case": 2,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=0  arr=[]",
+          "detail": ""
+        },
+        {
+          "case": 3,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=5  arr=[-1, -2, -3, -4, -5]",
+          "detail": ""
+        },
+        {
+          "case": 4,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=4  arr=[10, -10, 20, -20]",
+          "detail": ""
+        },
+        {
+          "case": 5,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=3  arr=[1, 1, 1]",
+          "detail": ""
+        },
+        {
+          "case": 6,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=16  arr=[1, 2, 3, 4, 5, 6...]",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "2-fact",
+      "title": "int fact(int n) -- recursion, so a real stack frame",
+      "built": true,
+      "linked": true,
+      "cases": [
+        {
+          "case": 0,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=0",
+          "detail": ""
+        },
+        {
+          "case": 1,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=1",
+          "detail": ""
+        },
+        {
+          "case": 2,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=2",
+          "detail": ""
+        },
+        {
+          "case": 3,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=3",
+          "detail": ""
+        },
+        {
+          "case": 4,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=6",
+          "detail": ""
+        },
+        {
+          "case": 5,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=10",
+          "detail": ""
+        },
+        {
+          "case": 6,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "n=12",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "3-matmul",
+      "title": "int matmul(int *A, int *B, int *C) -- three arguments",
+      "built": true,
+      "linked": true,
+      "cases": [
+        {
+          "case": 0,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "A=[1, 2, 3, 4, 5, 6...]  B=[1, 0, 0, 0, 1, 0...]  C=[0, 0, 0, 0, 0, 0...]",
+          "detail": ""
+        },
+        {
+          "case": 1,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "A=[1, 0, 0, 0, 1, 0...]  B=[1, 2, 3, 4, 5, 6...]  C=[0, 0, 0, 0, 0, 0...]",
+          "detail": ""
+        },
+        {
+          "case": 2,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "A=[1, 2, 3, 0, 0, 0...]  B=[1, 2, 3, 4, 5, 6...]  C=[0, 0, 0, 0, 0, 0...]",
+          "detail": ""
+        },
+        {
+          "case": 3,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "A=[1, 0, 0, 0, 1, 0...]  B=[1, 0, 0, 0, 1, 0...]  C=[0, 0, 0, 0, 0, 0...]",
+          "detail": ""
+        },
+        {
+          "case": 4,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "A=[1, 1, 1, 1, 1, 1...]  B=[1, 1, 1, 1, 1, 1...]  C=[0, 0, 0, 0, 0, 0...]",
+          "detail": ""
+        },
+        {
+          "case": 5,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "A=[1, -2, 3, -4, 5, -6...]  B=[2, 1, 1, 1, 2, 1...]  C=[0, 0, 0, 0, 0, 0...]",
+          "detail": ""
+        },
+        {
+          "case": 6,
+          "value_ok": true,
+          "abi_ok": true,
+          "passed": true,
+          "input": "A=[1, 2, 3, 4, 5, 6...]  B=[1, 0, 0, 0, 1, 0...]  C=[999, 999, 999, 999, 999, 999...]",
+          "detail": ""
+        }
+      ]
+    }
+  ],
+  "values_passed": 21,
+  "abi_passed": 21,
+  "cases_total": 21
+}
