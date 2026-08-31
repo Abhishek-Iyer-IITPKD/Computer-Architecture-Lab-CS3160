@@ -105,7 +105,10 @@ else{
     }
     if(d.fmt == FMT_R || d.fmt == FMT_S || d.fmt == FMT_B){
         inst += REG_NAMES[d.rs2];
-    } else if(d.fmt == FMT_I || d.fmt == FMT_U){
+    } else if(d.fmt == FMT_I){
+        inst += std::to_string(d.imm);
+    } else if(d.fmt == FMT_U){
+        inst += "0x";
         inst += std::to_string(d.imm);
     }
 }
