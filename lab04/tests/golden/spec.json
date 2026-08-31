@@ -1,0 +1,11 @@
+{
+  "args": [
+    "--norun",
+    "--disasm=0x80000000:0x80000200"
+  ],
+  "compare": [
+    "stdout"
+  ],
+  "lab": "lab04",
+  "stat_keys": []
+}

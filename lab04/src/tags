@@ -1,0 +1,333 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CONSOLE_LEVEL	log.cpp	/^static const LogLevel CONSOLE_LEVEL = LOG_INFO;$/;"	v	file:
+CS3160_COMMON_H	common.h	13;"	d
+CS3160_CONFIG_H	config.h	14;"	d
+CS3160_DECODE_H	decode.h	18;"	d
+CS3160_DISASM_H	disasm.h	13;"	d
+CS3160_LOADER_H	loader.h	14;"	d
+CS3160_LOG_H	log.h	14;"	d
+CS3160_MEMORY_H	memory.h	23;"	d
+CS3160_RAM_H	ram.h	18;"	d
+CS3160_STATS_H	stats.h	9;"	d
+CacheConfig	config.h	/^struct CacheConfig {$/;"	s
+Config	config.h	/^struct Config {$/;"	s
+Decoded	decode.h	/^struct Decoded {$/;"	s
+FMT_B	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	e	enum:Format
+FMT_I	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	e	enum:Format
+FMT_J	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	e	enum:Format
+FMT_NONE	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	e	enum:Format
+FMT_R	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	e	enum:Format
+FMT_S	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	e	enum:Format
+FMT_U	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	e	enum:Format
+Format	decode.h	/^enum Format { FMT_NONE, FMT_R, FMT_I, FMT_S, FMT_B, FMT_U, FMT_J };$/;"	g
+LOAD_ADDR	sim.cpp	/^static const u32 LOAD_ADDR = 0x80000000u;$/;"	v	file:
+LOG_BODY	log.cpp	70;"	d	file:
+LOG_DEBUG	log.h	/^    LOG_DEBUG = 10,$/;"	e	enum:LogLevel
+LOG_ERROR	log.h	/^    LOG_ERROR = 40,$/;"	e	enum:LogLevel
+LOG_INFO	log.h	/^    LOG_INFO  = 20,$/;"	e	enum:LogLevel
+LOG_OUT	log.h	/^    LOG_OUT   = 25,  \/\/ per-instruction trace; between INFO and ERROR$/;"	e	enum:LogLevel
+LevelStats	stats.h	/^struct LevelStats {$/;"	s
+LogLevel	log.h	/^enum LogLevel {$/;"	g
+MAP_DIRECT	config.h	/^    MAP_DIRECT,  \/\/ one block per set (associativity 1)$/;"	e	enum:Mapping
+MAP_FULL	config.h	/^    MAP_FULL,    \/\/ one set holding every block$/;"	e	enum:Mapping
+MAP_SET	config.h	/^    MAP_SET,     \/\/ `assoc` blocks per set$/;"	e	enum:Mapping
+Machine	sim.cpp	/^struct Machine {$/;"	s	file:
+Mapping	config.h	/^enum Mapping {$/;"	g
+MemoryLevel	memory.h	/^struct MemoryLevel {$/;"	s
+OPC_AUIPC	decode.cpp	/^    OPC_AUIPC  = 0x17,$/;"	e	enum:__anon1	file:
+OPC_BRANCH	decode.cpp	/^    OPC_BRANCH = 0x63,$/;"	e	enum:__anon1	file:
+OPC_FENCE	decode.cpp	/^    OPC_FENCE  = 0x0F,$/;"	e	enum:__anon1	file:
+OPC_JAL	decode.cpp	/^    OPC_JAL    = 0x6F,$/;"	e	enum:__anon1	file:
+OPC_JALR	decode.cpp	/^    OPC_JALR   = 0x67,$/;"	e	enum:__anon1	file:
+OPC_LOAD	decode.cpp	/^    OPC_LOAD   = 0x03,$/;"	e	enum:__anon1	file:
+OPC_LUI	decode.cpp	/^    OPC_LUI    = 0x37,$/;"	e	enum:__anon1	file:
+OPC_OP	decode.cpp	/^    OPC_OP     = 0x33,$/;"	e	enum:__anon1	file:
+OPC_OPIMM	decode.cpp	/^    OPC_OPIMM  = 0x13,$/;"	e	enum:__anon1	file:
+OPC_STORE	decode.cpp	/^    OPC_STORE  = 0x23,$/;"	e	enum:__anon1	file:
+OPC_SYSTEM	decode.cpp	/^    OPC_SYSTEM = 0x73,$/;"	e	enum:__anon1	file:
+OP_ADD	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_ADDI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_AND	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_ANDI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_AUIPC	decode.h	/^    OP_LUI, OP_AUIPC,$/;"	e	enum:Op
+OP_BEQ	decode.h	/^    OP_BEQ, OP_BNE, OP_BLT, OP_BGE, OP_BLTU, OP_BGEU,$/;"	e	enum:Op
+OP_BGE	decode.h	/^    OP_BEQ, OP_BNE, OP_BLT, OP_BGE, OP_BLTU, OP_BGEU,$/;"	e	enum:Op
+OP_BGEU	decode.h	/^    OP_BEQ, OP_BNE, OP_BLT, OP_BGE, OP_BLTU, OP_BGEU,$/;"	e	enum:Op
+OP_BLT	decode.h	/^    OP_BEQ, OP_BNE, OP_BLT, OP_BGE, OP_BLTU, OP_BGEU,$/;"	e	enum:Op
+OP_BLTU	decode.h	/^    OP_BEQ, OP_BNE, OP_BLT, OP_BGE, OP_BLTU, OP_BGEU,$/;"	e	enum:Op
+OP_BNE	decode.h	/^    OP_BEQ, OP_BNE, OP_BLT, OP_BGE, OP_BLTU, OP_BGEU,$/;"	e	enum:Op
+OP_COUNT	decode.h	/^    OP_COUNT$/;"	e	enum:Op
+OP_CSRRC	decode.h	/^    OP_CSRRW, OP_CSRRS, OP_CSRRC, OP_CSRRWI, OP_CSRRSI, OP_CSRRCI,$/;"	e	enum:Op
+OP_CSRRCI	decode.h	/^    OP_CSRRW, OP_CSRRS, OP_CSRRC, OP_CSRRWI, OP_CSRRSI, OP_CSRRCI,$/;"	e	enum:Op
+OP_CSRRS	decode.h	/^    OP_CSRRW, OP_CSRRS, OP_CSRRC, OP_CSRRWI, OP_CSRRSI, OP_CSRRCI,$/;"	e	enum:Op
+OP_CSRRSI	decode.h	/^    OP_CSRRW, OP_CSRRS, OP_CSRRC, OP_CSRRWI, OP_CSRRSI, OP_CSRRCI,$/;"	e	enum:Op
+OP_CSRRW	decode.h	/^    OP_CSRRW, OP_CSRRS, OP_CSRRC, OP_CSRRWI, OP_CSRRSI, OP_CSRRCI,$/;"	e	enum:Op
+OP_CSRRWI	decode.h	/^    OP_CSRRW, OP_CSRRS, OP_CSRRC, OP_CSRRWI, OP_CSRRSI, OP_CSRRCI,$/;"	e	enum:Op
+OP_DIV	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_DIVU	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_EBREAK	decode.h	/^    OP_ECALL, OP_EBREAK, OP_MRET,$/;"	e	enum:Op
+OP_ECALL	decode.h	/^    OP_ECALL, OP_EBREAK, OP_MRET,$/;"	e	enum:Op
+OP_FENCE	decode.h	/^    OP_FENCE, OP_FENCE_I,$/;"	e	enum:Op
+OP_FENCE_I	decode.h	/^    OP_FENCE, OP_FENCE_I,$/;"	e	enum:Op
+OP_INVALID	decode.h	/^    OP_INVALID = 0,  \/\/ not an encoding this simulator knows$/;"	e	enum:Op
+OP_JAL	decode.h	/^    OP_JAL, OP_JALR,$/;"	e	enum:Op
+OP_JALR	decode.h	/^    OP_JAL, OP_JALR,$/;"	e	enum:Op
+OP_LB	decode.h	/^    OP_LB, OP_LH, OP_LW, OP_LBU, OP_LHU,$/;"	e	enum:Op
+OP_LBU	decode.h	/^    OP_LB, OP_LH, OP_LW, OP_LBU, OP_LHU,$/;"	e	enum:Op
+OP_LH	decode.h	/^    OP_LB, OP_LH, OP_LW, OP_LBU, OP_LHU,$/;"	e	enum:Op
+OP_LHU	decode.h	/^    OP_LB, OP_LH, OP_LW, OP_LBU, OP_LHU,$/;"	e	enum:Op
+OP_LUI	decode.h	/^    OP_LUI, OP_AUIPC,$/;"	e	enum:Op
+OP_LW	decode.h	/^    OP_LB, OP_LH, OP_LW, OP_LBU, OP_LHU,$/;"	e	enum:Op
+OP_MRET	decode.h	/^    OP_ECALL, OP_EBREAK, OP_MRET,$/;"	e	enum:Op
+OP_MUL	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_MULH	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_MULHSU	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_MULHU	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_OR	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_ORI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_REM	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_REMU	decode.h	/^    OP_MUL, OP_MULH, OP_MULHSU, OP_MULHU, OP_DIV, OP_DIVU, OP_REM, OP_REMU,$/;"	e	enum:Op
+OP_SB	decode.h	/^    OP_SB, OP_SH, OP_SW,$/;"	e	enum:Op
+OP_SH	decode.h	/^    OP_SB, OP_SH, OP_SW,$/;"	e	enum:Op
+OP_SLL	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_SLLI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_SLT	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_SLTI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_SLTIU	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_SLTU	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_SRA	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_SRAI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_SRL	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_SRLI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OP_SUB	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_SW	decode.h	/^    OP_SB, OP_SH, OP_SW,$/;"	e	enum:Op
+OP_XOR	decode.h	/^    OP_ADD, OP_SUB, OP_SLL, OP_SLT, OP_SLTU, OP_XOR, OP_SRL, OP_SRA, OP_OR, OP_AND,$/;"	e	enum:Op
+OP_XORI	decode.h	/^    OP_ADDI, OP_SLTI, OP_SLTIU, OP_XORI, OP_ORI, OP_ANDI, OP_SLLI, OP_SRLI, OP_SRAI,$/;"	e	enum:Op
+OVERLAP_MAX	config.h	/^    OVERLAP_MAX,  \/\/ the two accesses proceed in parallel; pay the larger$/;"	e	enum:Overlap
+OVERLAP_SUM	config.h	/^    OVERLAP_SUM,  \/\/ single ported memory, one access at a time; pay both$/;"	e	enum:Overlap
+Op	decode.h	/^enum Op {$/;"	g
+Options	sim.cpp	/^struct Options {$/;"	s	file:
+Overlap	config.h	/^enum Overlap {$/;"	g
+PROC_FORWARDING	config.h	/^    PROC_FORWARDING,  \/\/ 5 stages, forwarding paths, branch resolved early$/;"	e	enum:ProcKind
+PROC_PIPELINED	config.h	/^    PROC_PIPELINED,   \/\/ 5 stages, stall on every hazard$/;"	e	enum:ProcKind
+PROC_SINGLE	config.h	/^    PROC_SINGLE,      \/\/ one instruction per iteration, no pipeline$/;"	e	enum:ProcKind
+ProcKind	config.h	/^enum ProcKind {$/;"	g
+REG_NAMES	disasm.cpp	/^static const char *REG_NAMES[32] = {$/;"	v	file:
+REPL_FIFO	config.h	/^enum Replacement { REPL_FIFO, REPL_LRU };$/;"	e	enum:Replacement
+REPL_LRU	config.h	/^enum Replacement { REPL_FIFO, REPL_LRU };$/;"	e	enum:Replacement
+RESOLVE_EX	config.h	/^enum ResolveStage { RESOLVE_ID = 2, RESOLVE_EX = 3, RESOLVE_MEM = 4 };$/;"	e	enum:ResolveStage
+RESOLVE_ID	config.h	/^enum ResolveStage { RESOLVE_ID = 2, RESOLVE_EX = 3, RESOLVE_MEM = 4 };$/;"	e	enum:ResolveStage
+RESOLVE_MEM	config.h	/^enum ResolveStage { RESOLVE_ID = 2, RESOLVE_EX = 3, RESOLVE_MEM = 4 };$/;"	e	enum:ResolveStage
+Ram	ram.h	/^struct Ram : MemoryLevel {$/;"	s
+Replacement	config.h	/^enum Replacement { REPL_FIFO, REPL_LRU };$/;"	g
+ResolveStage	config.h	/^enum ResolveStage { RESOLVE_ID = 2, RESOLVE_EX = 3, RESOLVE_MEM = 4 };$/;"	g
+Stats	stats.h	/^struct Stats {$/;"	s
+WM_ALLOCATE	config.h	/^    WM_ALLOCATE,    \/\/ fetch the block, then write into it$/;"	e	enum:WriteMiss
+WM_NOALLOCATE	config.h	/^    WM_NOALLOCATE,  \/\/ write straight past this level, leaving it unchanged$/;"	e	enum:WriteMiss
+WP_WRITEBACK	config.h	/^    WP_WRITEBACK,     \/\/ a write marks the block dirty; memory is updated on eviction$/;"	e	enum:WritePolicy
+WP_WRITETHROUGH	config.h	/^    WP_WRITETHROUGH,  \/\/ a write goes to this level and to the next level immediately$/;"	e	enum:WritePolicy
+WriteMiss	config.h	/^enum WriteMiss {$/;"	g
+WritePolicy	config.h	/^enum WritePolicy {$/;"	g
+as_signed	common.h	/^inline i32 as_signed(u32 v) { return (i32)v; }$/;"	f
+as_unsigned	common.h	/^inline u32 as_unsigned(i32 v) { return (u32)v; }$/;"	f
+assoc	config.h	/^    int         assoc;        \/\/ blocks per set (ignored unless mapping = set)$/;"	m	struct:CacheConfig
+base	ram.h	/^    u32             base;$/;"	m	struct:Ram
+bits	common.h	/^inline u32 bits(u32 v, int hi, int lo) {$/;"	f
+block_size	config.h	/^    int         block_size;   \/\/ bytes per block$/;"	m	struct:CacheConfig
+branches	stats.h	/^    long branches;$/;"	m	struct:Stats
+build_machine	sim.cpp	/^static void build_machine(Machine &m, const Config &cfg, Stats &st) {$/;"	f	file:
+bytes	ram.h	/^    std::vector<u8> bytes;  \/\/ bytes[i] is the byte at address base + i$/;"	m	struct:Ram
+cache_defaults	config.cpp	/^static void cache_defaults(CacheConfig &c, const char *name, bool valid, int latency,$/;"	f	file:
+cache_set	config.cpp	/^static bool cache_set(CacheConfig &c, const std::string &key, const std::string &val) {$/;"	f	file:
+check_range	ram.cpp	/^static void check_range(const Ram &ram, u32 addr, int size, const char *what) {$/;"	f	file:
+config_defaults	config.cpp	/^void config_defaults(Config &cfg) {$/;"	f
+config_has_forwarding	config.cpp	/^bool config_has_forwarding(ProcKind kind) {$/;"	f
+config_log	config.cpp	/^void config_log(const Config &cfg) {$/;"	f
+config_path	sim.cpp	/^    const char *config_path;$/;"	m	struct:Options	file:
+config_read	config.cpp	/^void config_read(Config &cfg, const char *path) {$/;"	f
+config_resolve_stage	config.cpp	/^ResolveStage config_resolve_stage(const Config &cfg, ProcKind kind) {$/;"	f
+config_validate	config.cpp	/^void config_validate(const Config &cfg) {$/;"	f
+csr	decode.h	/^    u32 csr;  \/\/ CSR number, for the Zicsr instructions only$/;"	m	struct:Decoded
+csr_name	disasm.cpp	/^static const char *csr_name(u32 csr) {$/;"	f	file:
+cycles	stats.h	/^    long cycles;             \/\/ clock cycles, including stalls and memory delay$/;"	m	struct:Stats
+data_accesses	stats.h	/^    long data_accesses;      \/\/ data-side memory accesses (loads + stores)$/;"	m	struct:Stats
+decode	decode.cpp	/^Decoded decode(u32 raw, u32 pc) {$/;"	f
+decode_none	decode.cpp	/^Decoded decode_none(void) {$/;"	f
+disasm	disasm.cpp	/^std::string disasm(const Decoded &d) {$/;"	f
+disasm	disasm.cpp	/^std::string disasm(u32 raw, u32 pc) {$/;"	f
+disasm	sim.cpp	/^    const char *disasm;$/;"	m	struct:Options	file:
+dmem	sim.cpp	/^    MemoryLevel *dmem;  \/\/ what loads and stores go to$/;"	m	struct:Machine	file:
+dump	sim.cpp	/^    const char *dump;$/;"	m	struct:Options	file:
+emit	log.cpp	/^static void emit(LogLevel level, const char *fmt, va_list ap) {$/;"	f	file:
+emit_file_only	log.cpp	/^static void emit_file_only(LogLevel level, const char *fmt, va_list ap) {$/;"	f	file:
+evictions	stats.h	/^    long evictions;        \/\/ valid blocks displaced to make room$/;"	m	struct:LevelStats
+exit_status	stats.h	/^    i32  exit_status;$/;"	m	struct:Stats
+exited	stats.h	/^    bool exited;             \/\/ did the program reach _exit and store to tohost?$/;"	m	struct:Stats
+fatal	log.cpp	/^void fatal(const char *fmt, ...) {$/;"	f
+fence_set	disasm.cpp	/^static std::string fence_set(u32 v) {$/;"	f	file:
+fetches	stats.h	/^    long fetches;            \/\/ instruction-side memory accesses$/;"	m	struct:Stats
+flush_machine	sim.cpp	/^static void flush_machine(Machine &m, const Config &cfg) {$/;"	f	file:
+flushed	stats.h	/^    long flushed;            \/\/ wrong-path instructions squashed$/;"	m	struct:Stats
+fmt	decode.h	/^    Format fmt;$/;"	m	struct:Decoded
+format	disasm.cpp	/^static std::string format(const char *fmt, ...) {$/;"	f	file:
+forwarding_resolve	config.h	/^    ResolveStage forwarding_resolve;$/;"	m	struct:Config
+g_file	log.cpp	/^static FILE     *g_file       = NULL;$/;"	v	file:
+g_file_level	log.cpp	/^static LogLevel  g_file_level = LOG_DEBUG;$/;"	v	file:
+g_where	config.cpp	/^static const char *g_where = "";$/;"	v	file:
+i1	config.h	/^    CacheConfig i1, l1, l2;$/;"	m	struct:Config
+i32	common.h	/^typedef int32_t  i32;$/;"	t
+i64	common.h	/^typedef int64_t  i64;$/;"	t
+iequal	config.cpp	/^static bool iequal(const std::string &a, const char *b) {$/;"	f	file:
+image	sim.cpp	/^    const char *image;$/;"	m	struct:Options	file:
+imem	sim.cpp	/^    MemoryLevel *imem;  \/\/ what instruction fetch reads from$/;"	m	struct:Machine	file:
+imm	decode.h	/^    u32 imm;$/;"	m	struct:Decoded
+imm_b	decode.cpp	/^static u32 imm_b(u32 raw) {$/;"	f	file:
+imm_i	decode.cpp	/^static u32 imm_i(u32 raw) {$/;"	f	file:
+imm_j	decode.cpp	/^static u32 imm_j(u32 raw) {$/;"	f	file:
+imm_s	decode.cpp	/^static u32 imm_s(u32 raw) {$/;"	f	file:
+imm_u	decode.cpp	/^static u32 imm_u(u32 raw) {$/;"	f	file:
+instructions	stats.h	/^    long instructions;       \/\/ instructions that retired$/;"	m	struct:Stats
+is_branch	decode.cpp	/^bool is_branch(Op op) {$/;"	f
+is_cache	stats.h	/^    bool is_cache;$/;"	m	struct:LevelStats
+is_csr	decode.cpp	/^bool is_csr(Op op) {$/;"	f
+is_jump	decode.cpp	/^bool is_jump(Op op) {$/;"	f
+is_load	decode.cpp	/^bool is_load(Op op) {$/;"	f
+is_power_of_two	common.h	/^inline bool is_power_of_two(u32 v) { return v != 0 && (v & (v - 1)) == 0; }$/;"	f
+is_store	decode.cpp	/^bool is_store(Op op) {$/;"	f
+jumps	stats.h	/^    long jumps;$/;"	m	struct:Stats
+l1	config.h	/^    CacheConfig i1, l1, l2;$/;"	m	struct:Config
+l2	config.h	/^    CacheConfig i1, l1, l2;$/;"	m	struct:Config
+latency	config.h	/^    int         latency;      \/\/ cycles for a hit at this level$/;"	m	struct:CacheConfig
+latency	ram.h	/^    int             latency;  \/\/ cycles to answer any access$/;"	m	struct:Ram
+latency_overlap	config.h	/^    Overlap      latency_overlap;$/;"	m	struct:Config
+level_accesses	stats.h	/^inline long level_accesses(const LevelStats &s) { return s.reads + s.writes; }$/;"	f
+level_hits	stats.h	/^inline long level_hits(const LevelStats &s)     { return s.read_hits + s.write_hits; }$/;"	f
+level_misses	stats.h	/^inline long level_misses(const LevelStats &s)   { return s.read_misses + s.write_misses; }$/;"	f
+level_name	log.cpp	/^static const char *level_name(LogLevel level) {$/;"	f	file:
+level_stats_init	stats.cpp	/^void level_stats_init(LevelStats &s, const char *name, bool is_cache) {$/;"	f
+levels	stats.h	/^    LevelStats *levels[8];$/;"	m	struct:Stats
+loader_load	loader.cpp	/^u32 loader_load(Ram &ram, const char *path, u32 load_addr) {$/;"	f
+loads	stats.h	/^    long loads;$/;"	m	struct:Stats
+log2_exact	common.h	/^inline int log2_exact(u32 v) {$/;"	f
+log_cache	config.cpp	/^static void log_cache(const CacheConfig &c) {$/;"	f	file:
+log_close	log.cpp	/^void log_close(void) {$/;"	f
+log_debug	log.cpp	/^void log_debug(const char *fmt, ...) { LOG_BODY(LOG_DEBUG, emit_file_only); }$/;"	f
+log_debug_enabled	log.cpp	/^bool log_debug_enabled(void) {$/;"	f
+log_error	log.cpp	/^void log_error(const char *fmt, ...) { LOG_BODY(LOG_ERROR, emit); }$/;"	f
+log_file	config.h	/^    std::string log_file;$/;"	m	struct:Config
+log_info	log.cpp	/^void log_info(const char *fmt, ...)  { LOG_BODY(LOG_INFO,  emit); }$/;"	f
+log_level	config.h	/^    int log_level;$/;"	m	struct:Config
+log_level_from_name	log.cpp	/^LogLevel log_level_from_name(const char *name) {$/;"	f
+log_open	log.cpp	/^void log_open(const char *path, LogLevel file_level) {$/;"	f
+log_out	log.cpp	/^void log_out(const char *fmt, ...)   { LOG_BODY(LOG_OUT,   emit_file_only); }$/;"	f
+log_path	sim.cpp	/^    const char *log_path;$/;"	m	struct:Options	file:
+main	sim.cpp	/^int main(int argc, char **argv) {$/;"	f
+mapping	config.h	/^    Mapping     mapping;$/;"	m	struct:CacheConfig
+mapping_name	config.cpp	/^const char *mapping_name(Mapping m) {$/;"	f
+mem_signed	decode.cpp	/^bool mem_signed(Op op) {$/;"	f
+mem_size	decode.cpp	/^int mem_size(Op op) {$/;"	f
+mem_stall_cycles	stats.h	/^    long mem_stall_cycles;   \/\/ cycles lost waiting for the memory hierarchy$/;"	m	struct:Stats
+n_levels	stats.h	/^    int n_levels;$/;"	m	struct:Stats
+name	config.h	/^    const char *name;         \/\/ "I1", "L1", "L2"$/;"	m	struct:CacheConfig
+name	stats.h	/^    const char *name;      \/\/ "I1", "L1", "L2", "RAM"$/;"	m	struct:LevelStats
+norun	sim.cpp	/^    bool        norun;$/;"	m	struct:Options	file:
+num_insts	config.h	/^    long        num_insts;    \/\/ instruction budget; a correct program exits first$/;"	m	struct:Config
+num_insts	sim.cpp	/^    const char *num_insts;$/;"	m	struct:Options	file:
+op	decode.h	/^    Op     op;$/;"	m	struct:Decoded
+op_name	decode.cpp	/^const char *op_name(Op op) {$/;"	f
+option	sim.cpp	/^static bool option(const char *arg, const char *name, const char **value) {$/;"	f	file:
+overlap	stats.h	/^    const char *overlap;        \/\/ "max" or "sum"$/;"	m	struct:Stats
+override	ram.h	/^    u32 read(u32 addr, int size, int *latency) override;$/;"	m	struct:Ram
+override	ram.h	/^    void read_block(u32 addr, u8 *dst, int block_size, int *latency) override;$/;"	m	struct:Ram
+override	ram.h	/^    void write(u32 addr, u32 data, int size, int *latency) override;$/;"	m	struct:Ram
+override	ram.h	/^    void write_block(u32 addr, const u8 *src, int block_size, int *latency) override;$/;"	m	struct:Ram
+parse_args	sim.cpp	/^static Options parse_args(int argc, char **argv) {$/;"	f	file:
+parse_bool	config.cpp	/^static bool parse_bool(const std::string &v) {$/;"	f	file:
+parse_int	config.cpp	/^static int parse_int(const std::string &v) {$/;"	f	file:
+parse_long	config.cpp	/^static long parse_long(const std::string &v) {$/;"	f	file:
+parse_mapping	config.cpp	/^static Mapping parse_mapping(const std::string &v) {$/;"	f	file:
+parse_overlap	config.cpp	/^static Overlap parse_overlap(const std::string &v) {$/;"	f	file:
+parse_range	sim.cpp	/^static void parse_range(const char *text, const char *what, u32 *lo, u32 *hi) {$/;"	f	file:
+parse_replacement	config.cpp	/^static Replacement parse_replacement(const std::string &v) {$/;"	f	file:
+parse_resolve	config.cpp	/^static ResolveStage parse_resolve(const std::string &v) {$/;"	f	file:
+parse_u32	config.cpp	/^static u32 parse_u32(const std::string &v) {$/;"	f	file:
+parse_write_miss	config.cpp	/^static WriteMiss parse_write_miss(const std::string &v) {$/;"	f	file:
+parse_write_policy	config.cpp	/^static WritePolicy parse_write_policy(const std::string &v) {$/;"	f	file:
+pc	decode.h	/^    u32 pc;   \/\/ where it was fetched from$/;"	m	struct:Decoded
+pc_redirects	stats.h	/^    long pc_redirects;$/;"	m	struct:Stats
+pipelined_resolve	config.h	/^    ResolveStage pipelined_resolve;$/;"	m	struct:Config
+proc	config.h	/^    ProcKind proc;$/;"	m	struct:Config
+proc	sim.cpp	/^    const char *proc;$/;"	m	struct:Options	file:
+proc_kind_from_name	config.cpp	/^ProcKind proc_kind_from_name(const char *name) {$/;"	f
+proc_kind_name	config.cpp	/^const char *proc_kind_name(ProcKind k) {$/;"	f
+processor	stats.h	/^    const char *processor;   \/\/ which model produced these numbers$/;"	m	struct:Stats
+ram	sim.cpp	/^    Ram   ram;$/;"	m	struct:Machine	file:
+ram_base	config.h	/^    u32 ram_base;$/;"	m	struct:Config
+ram_dump	ram.cpp	/^void ram_dump(Ram &ram, u32 start, u32 end, FILE *out) {$/;"	f
+ram_in_range	ram.cpp	/^bool ram_in_range(const Ram &ram, u32 addr, int size) {$/;"	f
+ram_init	ram.cpp	/^void ram_init(Ram &ram, u32 base, u32 size, int latency) {$/;"	f
+ram_latency	config.h	/^    int ram_latency;$/;"	m	struct:Config
+ram_read	ram.cpp	/^u32 ram_read(Ram &ram, u32 addr, int size) {$/;"	f
+ram_read_byte	ram.cpp	/^u8 ram_read_byte(Ram &ram, u32 addr) {$/;"	f
+ram_size	config.h	/^    u32 ram_size;$/;"	m	struct:Config
+ram_write	ram.cpp	/^void ram_write(Ram &ram, u32 addr, u32 data, int size) {$/;"	f
+ram_write_byte	ram.cpp	/^void ram_write_byte(Ram &ram, u32 addr, u8 value) {$/;"	f
+rate	stats.cpp	/^static double rate(long part, long total) {$/;"	f	file:
+raw	decode.h	/^    u32 raw;  \/\/ the encoding, kept for the disassembler and for error messages$/;"	m	struct:Decoded
+rd	decode.h	/^    int rd;$/;"	m	struct:Decoded
+read	ram.cpp	/^u32 Ram::read(u32 addr, int size, int *latency) {$/;"	f	class:Ram
+read_block	ram.cpp	/^void Ram::read_block(u32 addr, u8 *dst, int block_size, int *latency) {$/;"	f	class:Ram
+read_hits	stats.h	/^    long read_hits;$/;"	m	struct:LevelStats
+read_misses	stats.h	/^    long read_misses;$/;"	m	struct:LevelStats
+reads	stats.h	/^    long reads;            \/\/ requests arriving from the level above$/;"	m	struct:LevelStats
+reads_rs1	decode.cpp	/^bool reads_rs1(Op op) {$/;"	f
+reads_rs2	decode.cpp	/^bool reads_rs2(Op op) {$/;"	f
+reg_name	disasm.cpp	/^const char *reg_name(int n) {$/;"	f
+replacement	config.h	/^    Replacement replacement;$/;"	m	struct:CacheConfig
+replacement_name	config.cpp	/^const char *replacement_name(Replacement r) {$/;"	f
+resolve_stage	stats.h	/^    const char *resolve_stage;  \/\/ "ID", "EX" or "MEM"$/;"	m	struct:Stats
+resolve_stage_name	config.cpp	/^const char *resolve_stage_name(ResolveStage s) {$/;"	f
+rs1	decode.h	/^    int rs1;  \/\/ register numbers; 0 when the instruction has no such operand$/;"	m	struct:Decoded
+rs2	decode.h	/^    int rs2;$/;"	m	struct:Decoded
+sign_extend	common.h	/^inline u32 sign_extend(u32 v, int bits) {$/;"	f
+size	config.h	/^    int         size;         \/\/ bytes of data storage$/;"	m	struct:CacheConfig
+size	ram.h	/^    u32             size;$/;"	m	struct:Ram
+stall_cycles	stats.h	/^    long stall_cycles;       \/\/ cycles lost to hazard stalls$/;"	m	struct:Stats
+start	config.h	/^    u32         start;        \/\/ initial PC$/;"	m	struct:Config
+start	sim.cpp	/^    const char *start;$/;"	m	struct:Options	file:
+stats	ram.h	/^    LevelStats      stats;$/;"	m	struct:Ram
+stats_add_level	stats.cpp	/^void stats_add_level(Stats &st, LevelStats *level) {$/;"	f
+stats_cpi	stats.cpp	/^double stats_cpi(const Stats &st) {$/;"	f
+stats_file	config.h	/^    std::string stats_file;$/;"	m	struct:Config
+stats_init	stats.cpp	/^void stats_init(Stats &st) {$/;"	f
+stats_path	sim.cpp	/^    const char *stats_path;$/;"	m	struct:Options	file:
+stats_print_summary	stats.cpp	/^void stats_print_summary(const Stats &st) {$/;"	f
+stats_write	stats.cpp	/^void stats_write(const Stats &st, const char *path) {$/;"	f
+stores	stats.h	/^    long stores;$/;"	m	struct:Stats
+taken_branches	stats.h	/^    long taken_branches;     \/\/ inferred: next_pc was not pc + 4$/;"	m	struct:Stats
+tohost	config.h	/^    u32 tohost;               \/\/ a store to this address ends the simulation$/;"	m	struct:Config
+trim	config.cpp	/^static std::string trim(const std::string &s) {$/;"	f	file:
+u16	common.h	/^typedef uint16_t u16;$/;"	t
+u32	common.h	/^typedef uint32_t u32;$/;"	t
+u64	common.h	/^typedef uint64_t u64;$/;"	t
+u8	common.h	/^typedef uint8_t  u8;$/;"	t
+usage	sim.cpp	/^static void usage(const char *argv0) {$/;"	f	file:
+valid	config.h	/^    bool        valid;        \/\/ is this level present at all?$/;"	m	struct:CacheConfig
+validate_cache	config.cpp	/^static void validate_cache(const CacheConfig &c) {$/;"	f	file:
+write	ram.cpp	/^void Ram::write(u32 addr, u32 data, int size, int *latency) {$/;"	f	class:Ram
+write_block	ram.cpp	/^void Ram::write_block(u32 addr, const u8 *src, int block_size, int *latency) {$/;"	f	class:Ram
+write_hits	stats.h	/^    long write_hits;$/;"	m	struct:LevelStats
+write_miss	config.h	/^    WriteMiss   write_miss;$/;"	m	struct:CacheConfig
+write_miss_name	config.cpp	/^const char *write_miss_name(WriteMiss w) {$/;"	f
+write_misses	stats.h	/^    long write_misses;$/;"	m	struct:LevelStats
+write_policy	config.h	/^    WritePolicy write_policy;$/;"	m	struct:CacheConfig
+write_policy_name	config.cpp	/^const char *write_policy_name(WritePolicy w) {$/;"	f
+writebacks	stats.h	/^    long writebacks;       \/\/ dirty blocks handed to the next level down$/;"	m	struct:LevelStats
+writes	stats.h	/^    long writes;$/;"	m	struct:LevelStats
+writes_rd	decode.cpp	/^bool writes_rd(Op op) {$/;"	f
+~MemoryLevel	memory.h	/^    virtual ~MemoryLevel() {}$/;"	f	struct:MemoryLevel

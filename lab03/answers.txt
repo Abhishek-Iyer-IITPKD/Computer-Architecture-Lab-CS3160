@@ -1,0 +1,40 @@
+ CS3160 Lab 3 -- Part 1 answers
+#
+# Fill in the tables below by running the reference simulator, as described in
+# sections 1.1 to 1.3 of the handout. Write your answer after the colon on each
+# line; do not delete lines or add extra ones.
+#
+# These are marked automatically against what the simulator actually reports,
+# so copy the numbers exactly as they appear. CPI to four decimal places.
+
+## 1.1  Ideal memory:  ./reference-sim --proc=single tests/images/<program>.r5ob
+
+1-even            instructions: 110        cycles: 110        cpi: 1.0000
+2-prime           instructions: 74         cycles: 74         cpi: 1.0000
+4-histogram       instructions: 268        cycles: 268        cpi: 1.0000
+8-arith-edges     instructions: 371        cycles: 371        cpi: 1.0000
+10-branch-offset4 instructions: 67         cycles: 67         cpi: 1.0000
+
+## 1.2  RAM latency 100, no cache:  --config=slow.ini
+
+1-even            instructions: 110        cycles: 11800      cpi: 107.2727
+2-prime           instructions: 74         cycles: 7700       cpi: 104.0541
+4-histogram       instructions: 268        cycles: 33000      cpi: 123.1343
+8-arith-edges     instructions: 371        cycles: 47100      cpi: 126.9542
+10-branch-offset4 instructions: 67         cycles: 6800       cpi: 101.4925
+
+## 1.3  With a 1 KiB instruction cache in front of it
+
+1-even            cycles: 1720       i1_hit_rate: 93.64%
+2-prime           cycles: 1148       i1_hit_rate: 90.54%
+4-histogram       cycles: 7436       i1_hit_rate: 97.39%
+8-arith-edges     cycles: 13342      i1_hit_rate: 92.99%
+10-branch-offset4 cycles: 834        i1_hit_rate: 91.04%
+
+## 1.3  Two questions, one sentence each.
+
+# Why does a 1 KiB cache help a program whose instructions do not fit in 1 KiB?
+Q1: 
+
+# Which program benefits least, and what is different about it?
+Q2: 2-prime benefits least, it has the lowest hit rate i.e. most cache misses.

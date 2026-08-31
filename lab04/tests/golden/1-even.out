@@ -1,0 +1,136 @@
+0x80000000: 00000093    addi ra, zero, 0
+0x80000004: 00000113    addi sp, zero, 0
+0x80000008: 00000193    addi gp, zero, 0
+0x8000000c: 00000213    addi tp, zero, 0
+0x80000010: 00000293    addi t0, zero, 0
+0x80000014: 00000313    addi t1, zero, 0
+0x80000018: 00000393    addi t2, zero, 0
+0x8000001c: 00000413    addi s0, zero, 0
+0x80000020: 00000493    addi s1, zero, 0
+0x80000024: 00000513    addi a0, zero, 0
+0x80000028: 00000593    addi a1, zero, 0
+0x8000002c: 00000613    addi a2, zero, 0
+0x80000030: 00000693    addi a3, zero, 0
+0x80000034: 00000713    addi a4, zero, 0
+0x80000038: 00000793    addi a5, zero, 0
+0x8000003c: 00000813    addi a6, zero, 0
+0x80000040: 00000893    addi a7, zero, 0
+0x80000044: 00000913    addi s2, zero, 0
+0x80000048: 00000993    addi s3, zero, 0
+0x8000004c: 00000a13    addi s4, zero, 0
+0x80000050: 00000a93    addi s5, zero, 0
+0x80000054: 00000b13    addi s6, zero, 0
+0x80000058: 00000b93    addi s7, zero, 0
+0x8000005c: 00000c13    addi s8, zero, 0
+0x80000060: 00000c93    addi s9, zero, 0
+0x80000064: 00000d13    addi s10, zero, 0
+0x80000068: 00000d93    addi s11, zero, 0
+0x8000006c: 00000e13    addi t3, zero, 0
+0x80000070: 00000e93    addi t4, zero, 0
+0x80000074: 00000f13    addi t5, zero, 0
+0x80000078: 00000f93    addi t6, zero, 0
+0x8000007c: 0001e2b7    lui t0, 0x1e
+0x80000080: 3002a073    csrrs zero, mstatus, t0
+0x80000084: 00100293    addi t0, zero, 1
+0x80000088: 01f29293    slli t0, t0, 0x1f
+0x8000008c: 0002ca63    blt t0, zero, 0x800000a0
+0x80000090: 00100513    addi a0, zero, 1
+0x80000094: 00001297    auipc t0, 0x1
+0x80000098: f6a2a623    sw a0, -148(t0)
+0x8000009c: ff5ff06f    jal zero, 0x80000090
+0x800000a0: 00000297    auipc t0, 0x0
+0x800000a4: 04428293    addi t0, t0, 68
+0x800000a8: 30529073    csrrw zero, mtvec, t0
+0x800000ac: 00008197    auipc gp, 0x8
+0x800000b0: 79c18193    addi gp, gp, 1948
+0x800000b4: 00008217    auipc tp, 0x8
+0x800000b8: fd320213    addi tp, tp, -45
+0x800000bc: fc027213    andi tp, tp, -64
+0x800000c0: f1402573    csrrs a0, mhartid, zero
+0x800000c4: 00100593    addi a1, zero, 1
+0x800000c8: 00b57063    bgeu a0, a1, 0x800000c8
+0x800000cc: 00150113    addi sp, a0, 1
+0x800000d0: 01111113    slli sp, sp, 0x11
+0x800000d4: 00410133    add sp, sp, tp
+0x800000d8: 01151613    slli a2, a0, 0x11
+0x800000dc: 00c20233    add tp, tp, a2
+0x800000e0: 1300006f    jal zero, 0x80000210
+0x800000e4: ef010113    addi sp, sp, -272
+0x800000e8: 00112223    sw ra, 4(sp)
+0x800000ec: 00212423    sw sp, 8(sp)
+0x800000f0: 00312623    sw gp, 12(sp)
+0x800000f4: 00412823    sw tp, 16(sp)
+0x800000f8: 00512a23    sw t0, 20(sp)
+0x800000fc: 00612c23    sw t1, 24(sp)
+0x80000100: 00712e23    sw t2, 28(sp)
+0x80000104: 02812023    sw s0, 32(sp)
+0x80000108: 02912223    sw s1, 36(sp)
+0x8000010c: 02a12423    sw a0, 40(sp)
+0x80000110: 02b12623    sw a1, 44(sp)
+0x80000114: 02c12823    sw a2, 48(sp)
+0x80000118: 02d12a23    sw a3, 52(sp)
+0x8000011c: 02e12c23    sw a4, 56(sp)
+0x80000120: 02f12e23    sw a5, 60(sp)
+0x80000124: 05012023    sw a6, 64(sp)
+0x80000128: 05112223    sw a7, 68(sp)
+0x8000012c: 05212423    sw s2, 72(sp)
+0x80000130: 05312623    sw s3, 76(sp)
+0x80000134: 05412823    sw s4, 80(sp)
+0x80000138: 05512a23    sw s5, 84(sp)
+0x8000013c: 05612c23    sw s6, 88(sp)
+0x80000140: 05712e23    sw s7, 92(sp)
+0x80000144: 07812023    sw s8, 96(sp)
+0x80000148: 07912223    sw s9, 100(sp)
+0x8000014c: 07a12423    sw s10, 104(sp)
+0x80000150: 07b12623    sw s11, 108(sp)
+0x80000154: 07c12823    sw t3, 112(sp)
+0x80000158: 07d12a23    sw t4, 116(sp)
+0x8000015c: 07e12c23    sw t5, 120(sp)
+0x80000160: 07f12e23    sw t6, 124(sp)
+0x80000164: 34202573    csrrs a0, mcause, zero
+0x80000168: 341025f3    csrrs a1, mepc, zero
+0x8000016c: 00010613    addi a2, sp, 0
+0x80000170: 098000ef    jal ra, 0x80000208
+0x80000174: 34151073    csrrw zero, mepc, a0
+0x80000178: 000022b7    lui t0, 0x2
+0x8000017c: 80028293    addi t0, t0, -2048
+0x80000180: 3002a073    csrrs zero, mstatus, t0
+0x80000184: 00412083    lw ra, 4(sp)
+0x80000188: 00812103    lw sp, 8(sp)
+0x8000018c: 00c12183    lw gp, 12(sp)
+0x80000190: 01012203    lw tp, 16(sp)
+0x80000194: 01412283    lw t0, 20(sp)
+0x80000198: 01812303    lw t1, 24(sp)
+0x8000019c: 01c12383    lw t2, 28(sp)
+0x800001a0: 02012403    lw s0, 32(sp)
+0x800001a4: 02412483    lw s1, 36(sp)
+0x800001a8: 02812503    lw a0, 40(sp)
+0x800001ac: 02c12583    lw a1, 44(sp)
+0x800001b0: 03012603    lw a2, 48(sp)
+0x800001b4: 03412683    lw a3, 52(sp)
+0x800001b8: 03812703    lw a4, 56(sp)
+0x800001bc: 03c12783    lw a5, 60(sp)
+0x800001c0: 04012803    lw a6, 64(sp)
+0x800001c4: 04412883    lw a7, 68(sp)
+0x800001c8: 04812903    lw s2, 72(sp)
+0x800001cc: 04c12983    lw s3, 76(sp)
+0x800001d0: 05012a03    lw s4, 80(sp)
+0x800001d4: 05412a83    lw s5, 84(sp)
+0x800001d8: 05812b03    lw s6, 88(sp)
+0x800001dc: 05c12b83    lw s7, 92(sp)
+0x800001e0: 06012c03    lw s8, 96(sp)
+0x800001e4: 06412c83    lw s9, 100(sp)
+0x800001e8: 06812d03    lw s10, 104(sp)
+0x800001ec: 06c12d83    lw s11, 108(sp)
+0x800001f0: 07012e03    lw t3, 112(sp)
+0x800001f4: 07412e83    lw t4, 116(sp)
+0x800001f8: 07812f03    lw t5, 120(sp)
+0x800001fc: 07c12f83    lw t6, 124(sp)
+
+  processor        single
+  instructions     0
+  cycles           0
+  CPI              0.0000
+  RAM  accesses        0
+  exit status      program did not reach _exit
+
