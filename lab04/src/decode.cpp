@@ -103,7 +103,7 @@ switch(opcode){
         d.fmt = FMT_I;
         break;
     case OPC_FENCE:
-        // d.fmt = FMT_;
+        d.fmt = FMT_I;
         break;
     case OPC_OPIMM:
         d.fmt = FMT_I;
@@ -209,10 +209,37 @@ switch(d.fmt){
             else if(funct3 == 0x4) d.op = OP_LBU;
             else if(funct3 == 0x5) d.op = OP_LHU;
         } else if(opcode == OPC_SYSTEM){
-            if(funct7 == 0 && funct3 == 0 && rs2 == 0) d.op = OP_ECALL;
-            else if(funct7 == 0 && funct3 == 0 && rs2 == 1) d.op = OP_EBREAK;
-            
-        } else if(opcode == OPC_JALR) d.op = OP_JALR;
+            switch(funct3){
+                case 0:
+                    if(imm_i(raw) == 0x000) d.op = OP_ECALL;
+                    else if(imm_i(raw) == 0x001) d.op = OP_EBREAK;
+                    else if(imm_i(raw) == 0x302) d.op = OP_MRET;
+                    break;
+                case 1:
+                    d.csr = bits(raw, 31, 20);
+                    d.op = OP_CSRRW;
+                    break;
+                case 2:
+                    d.op = OP_CSRRS;
+                    break;
+                case 3:
+                    d.op = OP_CSRRC;
+                    break;
+                case 5:
+                    d.op = OP_CSRRWI;
+                    break;
+                case 6:
+                    d.op = OP_CSRRSI;
+                    break;
+                case 7:
+                    d.op = OP_CSRRCI;
+                    break;
+            }
+            if(funct3 != 0) d.csr = bits(raw, 31, 20);
+        } else if(opcode == OPC_FENCE){
+            if(funct3 == 0) d.op = OP_FENCE;
+            else if(funct3 == 1) d.op = OP_FENCE_I;
+        }
         break;
     case FMT_S:
         if(funct3 == 0x0) d.op = OP_SB;
@@ -243,7 +270,7 @@ if(reads_rs2(d.op)) d.rs2 = rs2;
 switch(d.fmt){
     case FMT_I:
         if(d.op == OP_SLLI || d.op == OP_SRLI || d.op == OP_SRAI) d.imm = rs2;
-        else if(opcode == OPC_SYSTEM) d.imm = 0;
+        else if(d.op == OP_CSRRWI || d.op == OP_CSRRSI || d.op == OP_CSRRCI) d.imm = rs1;
         else d.imm = imm_i(raw);
         break;
     case FMT_S:
