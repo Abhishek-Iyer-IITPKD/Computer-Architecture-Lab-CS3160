@@ -210,28 +210,28 @@ switch(d.fmt){
             else if(funct3 == 0x5) d.op = OP_LHU;
         } else if(opcode == OPC_SYSTEM){
             switch(funct3){
-                case 0:
+                case 0x0:
                     if(imm_i(raw) == 0x000) d.op = OP_ECALL;
                     else if(imm_i(raw) == 0x001) d.op = OP_EBREAK;
                     else if(imm_i(raw) == 0x302) d.op = OP_MRET;
                     break;
-                case 1:
+                case 0x1:
                     d.csr = bits(raw, 31, 20);
                     d.op = OP_CSRRW;
                     break;
-                case 2:
+                case 0x2:
                     d.op = OP_CSRRS;
                     break;
-                case 3:
+                case 0x3:
                     d.op = OP_CSRRC;
                     break;
-                case 5:
+                case 0x5:
                     d.op = OP_CSRRWI;
                     break;
-                case 6:
+                case 0x6:
                     d.op = OP_CSRRSI;
                     break;
-                case 7:
+                case 0x7:
                     d.op = OP_CSRRCI;
                     break;
             }
@@ -239,6 +239,8 @@ switch(d.fmt){
         } else if(opcode == OPC_FENCE){
             if(funct3 == 0) d.op = OP_FENCE;
             else if(funct3 == 1) d.op = OP_FENCE_I;
+        } else if(opcode == OPC_JALR){
+            if(funct3 == 0) d.op = OP_JALR;
         }
         break;
     case FMT_S:

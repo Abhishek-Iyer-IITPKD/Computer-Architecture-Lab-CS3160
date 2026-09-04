@@ -68,57 +68,71 @@ static std::string format(const char *fmt, ...) {
 }
 
 std::string disasm(const Decoded &d) {
-// TODO(week 4): render a decoded instruction as text.
-//
-// The format is the one objdump prints with -M no-aliases, because that
-// is what your output is compared against:
-//
-//     addi t0, zero, 1
-//     lw t0, 8(t1)
-//     beq t0, t1, 0x80000010
-//
-// Three things to get right: register names come from reg_name() above
-// (ABI names, not x5); a load or store puts its offset in the
-// offset(base) form; and a branch or jump prints its **target address**,
-// not its offset -- which you can work out because d.pc is right there.
-//
-// format() above is a printf that returns a std::string, which is
-// usually the shortest way to write each case.
-(void)csr_name; (void)fence_set; (void)format;
-
-std::string inst = op_name(d.op);
-inst += " ";
-if(d.fmt == FMT_R || d.fmt == FMT_I || d.fmt == FMT_U || d.fmt == FMT_J){
-    inst += REG_NAMES[d.rd];
-    inst += ", ";
-}
-if(d.op == OP_JALR || d.op == OP_LB || d.op == OP_LH || d.op == OP_LW || d.op == OP_LBU || d.op == OP_LHU || d.op == OP_SB || d.op == OP_SH || d.op == OP_SW){
-    inst += std::to_string(d.imm);
-    inst += "(";
-    inst += REG_NAMES[d.rs1];
-    inst += ")";
-}
-else{
-    if(d.fmt == FMT_R || d.fmt == FMT_I || d.fmt == FMT_S || d.fmt == FMT_B){
-        inst += REG_NAMES[d.rs1];
-        inst += ", ";
+    // TODO(week 4): render a decoded instruction as text.
+    //
+    // The format is the one objdump prints with -M no-aliases, because that
+    // is what your output is compared against:
+    //
+    //     addi t0, zero, 1
+    //     lw t0, 8(t1)
+    //     beq t0, t1, 0x80000010
+    //
+    // Three things to get right: register names come from reg_name() above
+    // (ABI names, not x5); a load or store puts its offset in the
+    // offset(base) form; and a branch or jump prints its **target address**,
+    // not its offset -- which you can work out because d.pc is right there.
+    //
+    // format() above is a printf that returns a std::string, which is
+    // usually the shortest way to write each case.
+    const char *op = op_name(d.op);
+    const char *rd = reg_name(d.rd);
+    const char *rs1 = reg_name(d.rs1);
+    const char *rs2 = reg_name(d.rs2);
+    i32 imm = as_signed(d.imm);
+    
+    if(d.op == OP_INVALID) return format(".word 0x%08x", d.raw);
+    if(is_load(d.op)) return format("%s %s, %d(%s)", op, rd, imm, rs1);
+    if(is_store(d.op)) return format("%s %s, %d(%s)", op, rs2, imm, rs1);
+    if(is_branch(d.op)) return format("%s %s, %s, 0x%08x", op, rs1, rs2, d.pc + d.imm);
+    if(is_csr(d.op)) {
+        const char *csr  = csr_name(d.csr);
+        std::string cstr = (csr != NULL) ? std::string(csr) : format("0x%x", d.csr);
+        // The immediate forms carry a 5-bit constant where the others have rs1.
+        if (d.op == OP_CSRRWI || d.op == OP_CSRRSI || d.op == OP_CSRRCI) return format("%s %s, %s, %u", op, rd, cstr.c_str(), d.imm);
+        return format("%s %s, %s, %s", op, rd, cstr.c_str(), rs1);
     }
-    if(d.fmt == FMT_R || d.fmt == FMT_S || d.fmt == FMT_B){
-        inst += REG_NAMES[d.rs2];
-    } else if(d.fmt == FMT_I){
-        inst += std::to_string(d.imm);
-    } else if(d.fmt == FMT_U){
-        inst += "0x";
-        inst += std::to_string(d.imm);
-    }
-}
-if(d.fmt == FMT_B || d.fmt == FMT_J){
-    inst += ", ";
-    inst += "0x";
-    inst += std::to_string(d.pc + d.imm);
-}
 
-return inst;
+    switch (d.op) {
+        case OP_LUI:
+        case OP_AUIPC:
+            // objdump prints the constant as it was written, before the shift.
+            return format("%s %s, 0x%x", op, rd, d.imm >> 12);
+        case OP_JAL:
+            return format("%s %s, 0x%08x", op, rd, d.pc + d.imm);
+        case OP_JALR:
+            return format("%s %s, %d(%s)", op, rd, imm, rs1);
+        case OP_SLLI:
+        case OP_SRLI:
+        case OP_SRAI:
+            // Shift amounts in hex, which is how objdump prints them.
+            return format("%s %s, %s, 0x%x", op, rd, rs1, d.imm);
+        case OP_FENCE:
+            return format("fence %s,%s", fence_set(bits(d.raw, 27, 24)).c_str(), fence_set(bits(d.raw, 23, 20)).c_str());
+        case OP_FENCE_I:
+        case OP_ECALL:
+        case OP_EBREAK:
+        case OP_MRET:
+            return std::string(op);
+        default:
+            break;
+    }
+
+    switch (d.fmt) {
+        case FMT_R: return format("%s %s, %s, %s", op, rd, rs1, rs2);
+        case FMT_I: return format("%s %s, %s, %d", op, rd, rs1, imm);
+        default:    break;
+    }
+    return format("%s ?", op);
 }
 
 std::string disasm(u32 raw, u32 pc) {
