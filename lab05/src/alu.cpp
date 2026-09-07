@@ -94,6 +94,15 @@ switch(op){
         return a+b;
     case OP_SUB:
         return a-b;
+    case OP_AND:
+    case OP_ANDI:
+        return a&b;
+    case OP_OR:
+    case OP_ORI:
+        return a|b;
+    case OP_XOR:
+    case OP_XORI:
+        return a^b;
     case OP_MUL:
         return a*b;
     case OP_MULH:
@@ -124,7 +133,8 @@ switch(op){
     case OP_SRL: case OP_SRLI:
         return a >> shift_amount(b);
     case OP_SRA: case OP_SRAI:
-        return sign_extend(a >> shift_amount(b), 32-shift_amount(b));
+        // return sign_extend(a >> shift_amount(b), 32-shift_amount(b));
+        return (u32)(as_signed(a) >> shift_amount(b));
     case OP_SLT: case OP_SLTI:
         return as_signed(a) < as_signed(b);
     case OP_SLTU: case OP_SLTIU:

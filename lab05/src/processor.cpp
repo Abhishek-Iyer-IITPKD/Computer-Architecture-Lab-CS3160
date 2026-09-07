@@ -156,11 +156,16 @@ MemAccess stage_memory(Processor &cpu, const Decoded &d, u32 addr, u32 v_rs2) {
     }
     if(is_store(d.op)){
         m.did_write = true;
-        cpu.dmem->write(addr, v_rs2, mem_size(d.op), &m.latency);
+        u32 size = mem_size(d.op);
+        u32 mask = (size == 1) ? 0xffu :
+                   (size == 2) ? 0xffffu :
+                                  0xffffffffu;
+        m.value = v_rs2 & mask;
+        cpu.dmem->write(addr, v_rs2, size, &m.latency);
         cpu.stats->data_accesses += 1;
         if(addr == cpu.cfg->tohost){
             cpu.halted = true;
-            cpu.exit_status = 4;
+            cpu.exit_status = v_rs2 >> 1;
         }
     }
     return m;
@@ -234,9 +239,9 @@ cpu.stats->instructions += 1;
 if(is_load(d.op)) cpu.stats->loads += 1;
 if(is_store(d.op)) cpu.stats->stores += 1;
 if(is_branch(d.op)) cpu.stats->branches += 1;
-if(next_pc != d.pc + 4) cpu.stats->taken_branches += 1;
+if(next_pc != d.pc + 4 && is_branch(d.op)) cpu.stats->taken_branches += 1;
 if(is_jump(d.op)) cpu.stats->jumps += 1;
-trace_retire(cpu, d, d.pc + 4, m);
+trace_retire(cpu, d, next_pc, m);
 }
 
 // --- Shared bits of the run loops -----------------------------------------
