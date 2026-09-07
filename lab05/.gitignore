@@ -1,0 +1,8 @@
+build/
+tests/result.json
+tests/__pycache__/
+programs/bins/
+programs/dumps/
+programs/runs/
+sim.log
+stats.json

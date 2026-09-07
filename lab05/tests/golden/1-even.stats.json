@@ -1,0 +1,29 @@
+{
+  "branch_resolved_in": "n/a",
+  "branches": 17,
+  "cpi": 1.0,
+  "cycles": 110,
+  "data_accesses": 8,
+  "exit_status": 0,
+  "exited": true,
+  "flushed_instructions": 0,
+  "instruction_fetches": 110,
+  "instructions": 110,
+  "jumps": 9,
+  "latency_overlap": "n/a",
+  "loads": 6,
+  "memory": [
+    {
+      "accesses": 118,
+      "level": "RAM",
+      "reads": 116,
+      "writes": 2
+    }
+  ],
+  "memory_stall_cycles": 0,
+  "pc_redirects": 15,
+  "processor": "single",
+  "stall_cycles": 0,
+  "stores": 2,
+  "taken_branches": 6
+}

@@ -1,0 +1,21 @@
+{
+  "args": [
+    "--proc=single"
+  ],
+  "compare": [
+    "trace",
+    "stats"
+  ],
+  "lab": "lab05",
+  "stat_keys": [
+    "instructions",
+    "cycles",
+    "loads",
+    "stores",
+    "branches",
+    "taken_branches",
+    "jumps",
+    "pc_redirects",
+    "exit_status"
+  ]
+}
