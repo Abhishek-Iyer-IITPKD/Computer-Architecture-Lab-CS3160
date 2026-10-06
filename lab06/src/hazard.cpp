@@ -193,8 +193,10 @@ bool redirects_pc(const Latch &l) {
 // function: an empty latch redirects nothing. A bubble must not be
 // mistaken for the instruction that was squashed out of it, or the
 // pipeline will flush on a stage that is holding nothing at all.
-(void)l;
-return false;
+    if(is_jump(l.d.op)) {
+        return true;  // unconditional: a jump goes somewhere by definition
+    }
+    return is_branch(l.d.op) && l.e.taken;
 }
 
 int wrong_path_instructions(ResolveStage stage) {
@@ -208,6 +210,12 @@ int wrong_path_instructions(ResolveStage stage) {
 // out for each of the three rather than memorising the answers: it is the
 // same argument three times, and it is what the flush in your run loop
 // uses to decide how many latches to empty.
-(void)stage;
+if(stage == RESOLVE_MEM) {
+    return 3;
+} else if(stage == RESOLVE_EX) {
+    return 2;
+} else if(stage == RESOLVE_ID) {
+    return 1;
+}
 return 0;
 }

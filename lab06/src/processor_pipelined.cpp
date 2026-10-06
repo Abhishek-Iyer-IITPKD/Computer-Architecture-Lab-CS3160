@@ -167,7 +167,15 @@ void run_pipelined(Processor &cpu) {
         // Fetching pc + 4 unconditionally is right even for a branch: whether it
         // was right is not known for another three stages, and the flush below is
         // how the machine changes its mind.
-        if(cpu.halted);
+        if(hz.stall){
+            next_if_id = if_id;
+            st.stall_cycles++;
+        } else if(!cpu.halted){
+            Fetched f = stage_fetch(cpu, cpu.pc);
+            next_if_id = latch_from_fetch(f);
+            fetch_latency = f.latency;
+            cpu.pc += 4;
+        }
 
 
 
@@ -191,7 +199,23 @@ void run_pipelined(Processor &cpu) {
         const Latch *resolved = (resolve == RESOLVE_MEM)  ? &next_mem_wb
                                 : (resolve == RESOLVE_EX) ? &next_ex_mem
                                                           : &next_id_ex;
-        (void)resolved;
+        if(redirects_pc(*resolved)){
+            st.pc_redirects++;
+            cpu.pc = resolved->next_pc;
+            int to_flush = wrong_path_instructions(resolve);
+            if(to_flush >= 1 && next_if_id.valid){
+                next_if_id = latch_bubble();
+                st.flushed++;
+            }
+            if(to_flush >= 2 && next_id_ex.valid){
+                next_id_ex = latch_bubble();
+                st.flushed++;
+            }
+            if(to_flush >= 3 && next_ex_mem.valid){
+                next_ex_mem = latch_bubble();
+                st.flushed++;
+            }
+        }
 
 
 
@@ -206,11 +230,12 @@ void run_pipelined(Processor &cpu) {
         // what it cost, everything over the first cycle is memory stall, and both
         // go in st. A slow memory freezes the whole pipeline, which is why the
         // cost is charged to the cycle and not to any one stage.
-        (void)next_if_id;
-        (void)next_id_ex;
-        (void)next_ex_mem;
-        (void)next_mem_wb;
-
+        if_id = next_if_id;
+        id_ex = next_id_ex;
+        ex_mem = next_ex_mem;
+        mem_wb = next_mem_wb;
+        st.cycles += cycle_cost(cpu, fetch_latency, mem_latency);
+        st.mem_stall_cycles += mem_latency - 1;
     }
     processor_dump(cpu);
 }
