@@ -1,0 +1,21 @@
+# What `git status` should not bother you with: generated output, and the parts
+# of this folder that are ours rather than yours. What is left is your own work.
+
+# Your build output.
+build/
+
+# The test harness. It is replaced with a fresh copy when your work is
+# collected, so nothing you change in here reaches the grading.
+tests/
+
+# What your build and test runs recorded about the session.
+.telemetry/
+
+# Assembled programs, their disassembly, and Spike's traces.
+programs/bins/
+programs/dumps/
+programs/runs/
+
+# The simulator writes these into whichever directory you ran it from.
+sim.log
+stats.json

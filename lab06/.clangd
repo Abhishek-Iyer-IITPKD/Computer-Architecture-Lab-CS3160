@@ -1,0 +1,10 @@
+CompileFlags:
+  Add: 
+    - "-std=c++17"
+    - "-Isrc"
+    - "-I."
+    - "--driver-mode=g++"
+  Compiler: /usr/bin/g++
+
+Index:
+  Background: Build
