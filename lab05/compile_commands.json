@@ -1,0 +1,200 @@
+[
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/alu.cpp",
+   "-o",
+   "build/alu.o"
+  ],
+  "file": "src/alu.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/config.cpp",
+   "-o",
+   "build/config.o"
+  ],
+  "file": "src/config.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/decode.cpp",
+   "-o",
+   "build/decode.o"
+  ],
+  "file": "src/decode.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/disasm.cpp",
+   "-o",
+   "build/disasm.o"
+  ],
+  "file": "src/disasm.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/loader.cpp",
+   "-o",
+   "build/loader.o"
+  ],
+  "file": "src/loader.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/log.cpp",
+   "-o",
+   "build/log.o"
+  ],
+  "file": "src/log.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/processor.cpp",
+   "-o",
+   "build/processor.o"
+  ],
+  "file": "src/processor.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/processor_single.cpp",
+   "-o",
+   "build/processor_single.o"
+  ],
+  "file": "src/processor_single.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/ram.cpp",
+   "-o",
+   "build/ram.o"
+  ],
+  "file": "src/ram.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/sim.cpp",
+   "-o",
+   "build/sim.o"
+  ],
+  "file": "src/sim.cpp"
+ },
+ {
+  "directory": "/home/Abhi-Iyer10/Documents/Abhishek Education/Courses/Semester 5/Computer Architecture Lab (CS3160)/Computer-Architecture-Lab-CS3160/lab05",
+  "arguments": [
+   "g++",
+   "-std=c++17",
+   "-Wall",
+   "-Wextra",
+   "-O2",
+   "-g",
+   "-MMD",
+   "-MP",
+   "-c",
+   "src/stats.cpp",
+   "-o",
+   "build/stats.o"
+  ],
+  "file": "src/stats.cpp"
+ }
+]
